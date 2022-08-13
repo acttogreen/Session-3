@@ -46,7 +46,6 @@ class Program
     {
         Random rand = new Random();
         NPC npc = new NPC();
-        npc.nama = "Budi";
         int randText = rand.Next(0, npc.greetings.Length);
 
         Console.WriteLine(npc.greetings[randText]);
@@ -61,21 +60,15 @@ class Program
 public class Humanoid
 {
     public string nama = "";
-    public string[] greetings, responds;
+    public string[] greetings = { };
+    public string[] responds = { };
 }
 public class NPC : Humanoid
 {
-    public string[] greetings = new string[]{
-        "Halo Apa Kabar ?",
-        "Hari ini cuacanya bagus",
-        "Selamat pagi",
-        "Selamat siang"
-    };
-
-    public string[] responds = new string[]{
-        "Halo, nama saya {0}",
-        "Saya senang bisa bertemu denganmu",
-        "Saya juga senang bisa bertemu denganmu",
-        "Sampai jumpa lagi"
-    };
+    public NPC()
+    {
+        base.nama = "Budi";
+        base.greetings = new string[] { "Halo Perkenalkan nama saya " + base.nama };
+        base.responds = new string[] { "Halo Salam kenal juga" };
+    }
 }
