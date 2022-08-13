@@ -4,7 +4,7 @@ class Program
 {
     private static void Main()
     {
-        DialogWithNPC();
+        CheckDamageTaken();
     }
 
     private static void PrintTrianglePattern() //Percobaan Nested Loop
@@ -54,6 +54,32 @@ class Program
 
         int randRespond = rand.Next(0, npc.responds.Length);
         Console.WriteLine(npc.responds[randRespond]);
+    }
+
+    private static void CheckDamageTaken()
+    {
+        bool quit = false;
+        while (!quit)
+        {
+            int damage = 10;
+            int hp = 50;
+            while (hp > 1)
+            {
+                Console.WriteLine("HP: " + hp);
+                Thread.Sleep(1000);
+                hp -= damage;
+            }
+            Console.WriteLine("Player Dead");
+
+            //check user type to continue or not
+            Console.WriteLine("Apakah Anda ingin melanjutkan? (Yes/No)");
+            quit = Console.ReadLine() == "No";
+            if (quit)
+            {
+                Console.WriteLine("Game Over");
+                break;
+            }
+        }
     }
 }
 
