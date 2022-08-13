@@ -4,8 +4,9 @@ class Program
 {
     private static void Main()
     {
-        PrintTrianglePattern();
+        DialogWithNPC();        
     }
+
     private static void PrintTrianglePattern() //Percobaan Nested Loop
     {
         for (int i = 1; i <= 5; i++) //TOP
@@ -24,8 +25,8 @@ class Program
             }
             Console.WriteLine();
         }
-
     }
+
     private static void PrintDialog() // For Loop with Timing
     {
         const string value = "Halo Perkenalkan nama saya Satriyo";
@@ -40,4 +41,36 @@ class Program
             Console.WriteLine(textOut);
         }
     }
+
+    private static void DialogWithNPC()
+    {
+        Random rand = new Random();
+        NPC npc = new NPC();
+        npc.namaNPC = "Budi";
+        int randText = rand.Next(0, npc.textGreetings.Length);
+
+        Console.WriteLine(npc.textGreetings[randText]);
+        Console.Write("Masukkan Respon Anda: ");
+        Console.WriteLine(Console.ReadLine());
+
+        int randRespond = rand.Next(0, npc.textRespond.Length);
+        Console.WriteLine(npc.textRespond[randRespond]);
+    }
+}
+
+public class NPC
+{
+    public string namaNPC = "";
+    public string[] textGreetings = new string[]{
+        "Halo Apa Kabar ?",
+        "Hari ini cuacanya bagus",
+        "Selamat pagi",
+        "Selamat siang"
+    };
+    public string[] textRespond = new string[]{
+        "Halo, nama saya {0}",
+        "Saya senang bisa bertemu denganmu",
+        "Saya juga senang bisa bertemu denganmu",
+        "Sampai jumpa lagi"
+    };
 }
