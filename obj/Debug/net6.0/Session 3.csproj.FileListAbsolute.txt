@@ -1,0 +1,15 @@
+D:\PIC\Project\Session 3\bin\Debug\net6.0\Session 3.exe
+D:\PIC\Project\Session 3\bin\Debug\net6.0\Session 3.deps.json
+D:\PIC\Project\Session 3\bin\Debug\net6.0\Session 3.runtimeconfig.json
+D:\PIC\Project\Session 3\bin\Debug\net6.0\Session 3.dll
+D:\PIC\Project\Session 3\bin\Debug\net6.0\Session 3.pdb
+D:\PIC\Project\Session 3\obj\Debug\net6.0\Session 3.csproj.AssemblyReference.cache
+D:\PIC\Project\Session 3\obj\Debug\net6.0\Session 3.GeneratedMSBuildEditorConfig.editorconfig
+D:\PIC\Project\Session 3\obj\Debug\net6.0\Session 3.AssemblyInfoInputs.cache
+D:\PIC\Project\Session 3\obj\Debug\net6.0\Session 3.AssemblyInfo.cs
+D:\PIC\Project\Session 3\obj\Debug\net6.0\Session 3.csproj.CoreCompileInputs.cache
+D:\PIC\Project\Session 3\obj\Debug\net6.0\Session 3.dll
+D:\PIC\Project\Session 3\obj\Debug\net6.0\refint\Session 3.dll
+D:\PIC\Project\Session 3\obj\Debug\net6.0\Session 3.pdb
+D:\PIC\Project\Session 3\obj\Debug\net6.0\Session 3.genruntimeconfig.cache
+D:\PIC\Project\Session 3\obj\Debug\net6.0\ref\Session 3.dll
