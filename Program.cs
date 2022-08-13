@@ -4,7 +4,7 @@ class Program
 {
     private static void Main()
     {
-        DialogWithNPC();        
+        DialogWithNPC();
     }
 
     private static void PrintTrianglePattern() //Percobaan Nested Loop
@@ -46,28 +46,33 @@ class Program
     {
         Random rand = new Random();
         NPC npc = new NPC();
-        npc.namaNPC = "Budi";
-        int randText = rand.Next(0, npc.textGreetings.Length);
+        npc.nama = "Budi";
+        int randText = rand.Next(0, npc.greetings.Length);
 
-        Console.WriteLine(npc.textGreetings[randText]);
+        Console.WriteLine(npc.greetings[randText]);
         Console.Write("Masukkan Respon Anda: ");
         Console.WriteLine(Console.ReadLine());
 
-        int randRespond = rand.Next(0, npc.textRespond.Length);
-        Console.WriteLine(npc.textRespond[randRespond]);
+        int randRespond = rand.Next(0, npc.responds.Length);
+        Console.WriteLine(npc.responds[randRespond]);
     }
 }
 
-public class NPC
+public class Humanoid
 {
-    public string namaNPC = "";
-    public string[] textGreetings = new string[]{
+    public string nama = "";
+    public string[] greetings, responds;
+}
+public class NPC : Humanoid
+{
+    public string[] greetings = new string[]{
         "Halo Apa Kabar ?",
         "Hari ini cuacanya bagus",
         "Selamat pagi",
         "Selamat siang"
     };
-    public string[] textRespond = new string[]{
+
+    public string[] responds = new string[]{
         "Halo, nama saya {0}",
         "Saya senang bisa bertemu denganmu",
         "Saya juga senang bisa bertemu denganmu",
